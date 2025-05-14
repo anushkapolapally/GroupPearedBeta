@@ -1,0 +1,180 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    background-color:#89ab75;
+    color: white;
+    padding: 20px 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center contents within header */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.logo:hover, .header-nav a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+.header-nav a {
+    color: #2d3d25;
+    background-color: #CDE0C2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    color: #19330b;
+    text-decoration: none;
+    font-weight: 500;
+}
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: 20px 0 40px;
+}
+.form-title {
+    color: #405735;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.team-container {
+    background-color: #f5f7fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.btn {
+    background-color: #405735;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #304227;
+}
+.btn-danger {
+    background-color: #e74c3c;
+}
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+.add-team-btn {
+    display: block;
+    margin: 20px 0;
+    background-color: #2ecc71;
+}
+.add-team-btn:hover {
+    background-color: #27ae60;
+}
+.submit-container {
+    margin-top: 30px;
+    text-align: center;
+}
+.submit-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.location-container {
+    margin-top: 20px;
+}
+
+#location {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #eee;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #2d3d25;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
