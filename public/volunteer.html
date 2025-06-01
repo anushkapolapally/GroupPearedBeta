@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peared - Find Opportunities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/volunteer.css">
+    <script src="js/volunteer.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-content">
+                <img src="assets/PearedLogo.jpg" alt="Logo" class="logo" onclick="location.href='index.html'">
+                <div class="text-group">
+                    <h1>Peared</h1>
+                    <div class="tagline">Helping volunteers like you find meaningful opportunities!</div>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="host.html">Host an Event</a>
+                <a href="info.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="volunteer-header">
+            <h2 class="volunteer-title">Volunteer Registration</h2>
+            
+            <!-- <div class="filter-container">
+                <label for="statusFilter">Filter:</label>
+                <select id="statusFilter">
+                    <option value="all">Add more options later</option>
+                </select>
+            </div> 
+            Ignore for now, we just need an MVP rn-->
+        </div>
+        <div class="empty-state">
+            <p>No events to display. Select a filter or check back later.</p>
+        </div>
+        <div id="eventsContainer">
+            <!-- Events will be dynamically loaded here -->
+
+            <div class="practice-state">
+                <p>If there were multiple events, this would happen.</p>
+                <p>Remove me later.</p>
+            </div>
+        </div>
+        
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">Next →</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peared. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

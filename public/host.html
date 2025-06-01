@@ -6,180 +6,28 @@
     <title>Host an Event - Peared</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #89ab75;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .tagline {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .back-link {
-            display: inline-block;
-            margin: 20px 0;
-            color: #19330b;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .form-container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin: 20px 0 40px;
-        }
-        .form-title {
-            color: #405735;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        .team-container {
-            background-color: #f5f7fa;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .team-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .btn {
-            background-color: #405735;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #304227;
-        }
-        .btn-danger {
-            background-color: #e74c3c;
-        }
-        .btn-danger:hover {
-            background-color: #c0392b;
-        }
-        .add-team-btn {
-            display: block;
-            margin: 20px 0;
-            background-color: #2ecc71;
-        }
-        .add-team-btn:hover {
-            background-color: #27ae60;
-        }
-        .submit-container {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .submit-btn {
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-        .location-container {
-            margin-top: 20px;
-        }
-
-        #location {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        #map {
-            height: 300px;
-            width: 100%;
-            border-radius: 5px;
-            background-color: #eee;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/host.css">
+    <script src="js/host.js" async></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Peared</h1>
-            <div class="tagline">Bringing volunteers and opportunities together</div>
-            <nav>
+        <div>
+            <div class="header-content">
+                <img src="assets/PearedLogo.jpg" alt="Logo" class="logo" onclick="location.href='index.html'">
+                <div class="text-group">
+                    <h1>Peared</h1>
+                    <div class="tagline">Helping organizers like you take the initiative to get what you or others want!</div>
+                </div>
+            </div>
+            <nav class="header-nav">
                 <a href="index.html">Home</a>
                 <a href="volunteer.html">Find Opportunities</a>
-                <a href="host.html">Host an Event</a>
+                <a href="info.html">About Us</a>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
         
         <div class="form-container">
             <h2 class="form-title">Host a Volunteering Event</h2>
@@ -205,8 +53,8 @@
                     <input type="date" id="eventDate" name="eventDate" required>
                 </div>
                 <div class="form-group">
-                    <label for="eventAdress">Event Adress*</label>
-                    <input type="adress" id="eventAdress" name="eventAdress" required>
+                    <label for="eventAddress">Event Address*</label>
+                    <input type="address" id="eventAddress" name="eventAddress" required>
                 </div>
                 
                 <div class="form-group">
@@ -260,82 +108,6 @@
         </div>
     </footer>
 
-    <script>
-        let teamCount = 1;
-        
-        function addTeam() {
-            teamCount++;
-            const newTeam = document.createElement('div');
-            newTeam.className = 'team-container';
-            newTeam.id = 'team' + teamCount;
-            
-            newTeam.innerHTML = `
-                <div class="team-header">
-                    <h4>Team ${teamCount}</h4>
-                    <button type="button" class="btn btn-danger" onclick="removeTeam('team${teamCount}')">Remove</button>
-                </div>
-                
-                <div class="form-group">
-                    <label for="teamName${teamCount}">Team Name*</label>
-                    <input type="text" id="teamName${teamCount}" name="teamName${teamCount}" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="teamSize${teamCount}">Number of Volunteers Needed*</label>
-                    <input type="number" id="teamSize${teamCount}" name="teamSize${teamCount}" min="1" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="teamDescription${teamCount}">Team Description*</label>
-                    <textarea id="teamDescription${teamCount}" name="teamDescription${teamCount}" placeholder="Describe what this team will be doing..." required></textarea>
-                </div>
-            `;
-            
-            document.getElementById('teamsContainer').appendChild(newTeam);
-        }
-        
-        function removeTeam(teamId) {
-            if (document.querySelectorAll('.team-container').length > 1) {
-                document.getElementById(teamId).remove();
-            } else {
-                alert('You must have at least one team.');
-            }
-        }
-        
-        document.getElementById('hostForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // In a real implementation, you would collect all the form data and submit to a server
-            alert('Your event has been submitted for approval. You will receive an email notification once approved.');
-            
-            // Redirect to home page
-            // window.location.href = 'index.html';
-        });
-
-        let map, marker;
-
-        function initMap() {
-            map = L.map('map').setView([37.7749, -122.4194], 13); // Default to San Francisco
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            marker = L.marker([37.7749, -122.4194], { draggable: true }).addTo(map);
-
-            marker.on('dragend', function (e) {
-                const position = marker.getLatLng();
-                document.getElementById('location').value = `${position.lat}, ${position.lng}`;
-            });
-
-            map.on('click', function (e) {
-                const position = e.latlng;
-                marker.setLatLng(position);
-                document.getElementById('location').value = `${position.lat}, ${position.lng}`;
-            });
-        }
-
-        window.onload = initMap;
-    </script>
+    
 </body>
 </html>

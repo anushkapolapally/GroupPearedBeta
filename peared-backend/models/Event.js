@@ -1,11 +1,20 @@
 // models/Event.js
 const mongoose = require('mongoose');
 
+const peopleSchema = new mongoose.Schema({
+  firstName: String, 
+  lastName: String,
+  email: String
+})
+
 const teamSchema = new mongoose.Schema({
   name: String,
   size: Number,
-  description: String
+  description: String,
+  people: [peopleSchema]
 });
+
+
 
 const eventSchema = new mongoose.Schema({
   eventName: String,
@@ -22,4 +31,8 @@ const eventSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Event', eventSchema);
+module.exports = {
+  Event: mongoose.model('Event', eventSchema),
+  Team: mongoose.model('Team', teamSchema),
+  People: mongoose.model('People', peopleSchema)
+};

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Peared</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-content">
+                <img src="assets/PearedLogo.jpg" alt="Logo" class="logo" onclick="location.href='index.html'">
+                <div class="text-group">
+                    <h1>Peared</h1>
+                    <div class="tagline">Welcome, dedicated administrator!</div>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="volunteer.html">Find Opportunities</a>
+                <a href="host.html">Host an Event</a>
+                <a href="info.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="admin-header">
+            <h2 class="admin-title">Admin Portal - Event Management</h2>
+            
+            <div class="filter-container">
+                <label for="statusFilter">Filter:</label>
+                <select id="statusFilter">
+                    <option value="all">All Events</option>
+                    <option value="pending">Pending Approval</option>
+                    <option value="approved">Approved</option>
+                    <option value="denied">Denied</option>
+                </select>
+            </div>
+        </div>
+        <h1 class="empty-state">
+            No events to display. Select a filter or check back later.
+        </h1>
+        <div id="eventsContainer">
+            <!-- Events will be dynamically loaded here -->
+            
+        </div>
+        
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">Next →</button> <!--TODO: Next button functionality, dynamic page numbers-->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VolunteerConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

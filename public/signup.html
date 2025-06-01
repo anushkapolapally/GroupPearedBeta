@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="js/signup.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header-content">
+                <img src="assets/PearedLogo.jpg" alt="Logo" class="logo" onclick="location.href='index.html'">
+                <div class="text-group">
+                    <h1>Peared</h1>
+                    <div class="tagline">Helping volunteers like you find meaningful opportunities!</div>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="host.html">Host an Event</a>
+                <a href="info.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="wrapper">
+        <form id="signup-form">
+            <h1>Sign Up</h1>
+            <div class="input-box">
+                <input type="text" placeholder="First Name" name="firstName" required />
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Last Name" name="lastName" required />
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" name="email" required />
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peared. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

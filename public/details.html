@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="css/details.css">
+    <script src="js/details.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header-content">
+                <img src="assets/PearedLogo.jpg" alt="Logo" class="logo" onclick="location.href='index.html'">
+                <div class="text-group">
+                    <h1>Peared</h1>
+                    <div class="tagline">Helping volunteers like you find meaningful opportunities!</div>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="host.html">Host an Event</a>
+                <a href="info.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="wrapper">
+        <h1 id="eventName">Event Name</h1>
+        <p id="eventDescription">Event Description</p>
+        <p id="eventDate">Event Date</p>
+        <p id="eventLocation">Event Location</p>
+        <p id="eventOrganizer">Organizer: <span id="organizerName">Organizer Name</span></p>
+        <p id="eventEmail">Contact: <span id="organizerEmail">Organizer Email</span></p>
+        <p id="eventVolunteers">Volunteer Count: <span id="volunteerCount">0</span></p>
+        <h2>People:</h2>
+        <div class="peopleContainer">
+            <!-- JavaScript will populate people here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Peared. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
